@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+
+    
+</head>
+
+<body>
+    
+    <!--
+    <div style="position: absolute; background-color: aquamarine; 
+    left: 50%; width:39rem; height: 100px; margin-left: -19.5rem;">
+    </div>
+    -->
+    
+
+    
+    <!--
+    <div class="letter-row">
+        <button style="width: 100px; text-align:center;" class="btn center"><i class="fa fa-home"></i></button>
+
+        <label for="inp" class="inp">
+            <form method="POST">
+                <input name="ans" type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Enter 5 Letter Word</span>
+                <span class="focus-bg"></span>
+
+            </form>
+            
+            
+        </label>
+    </div>
+    -->
+    
+    <button style="position:absolute; width:50px; height: 50px;"></button>
+    <div class="letter-row">
+
+        <label for="inp" class="inp">
+            <form method="POST">
+                <input name="ans" type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Enter 5 Letter Word</span>
+                <span class="focus-bg"></span>
+
+            </form>
+               
+        </label>
+    </div>
+  
+
+    
+
+
+
+    <div id="game-board">
+        
+        {% for i in range(n_row) %}
+            <div class="letter-row" style="background-color: rgb(162, 213, 162);">
+                {% for j in range(n_col) %}
+                    <div class="letter-box" style="background-color:{{ color_grid[i][j] }}">{{ grid[i][j] }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+    </div>
+
+<script>
+    var myName = "Codepen.io";
+    var red = [0, 100, 63];
+    var orange = [40, 100, 60];
+    var green = [75, 100, 40];
+    var blue = [196, 77, 55];
+    var purple = [280, 50, 60];
+    var letterColors = [red, orange, green, blue, purple];
+
+    drawName(myName, letterColors);
+
+    if(10 < 3)
+    {
+        bubbleShape = 'square';
+    }
+    else
+    {
+        bubbleShape = 'oval';
+    }
+
+    bounceBubbles();
+</script>
+
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="script.js" type="module"></script>
+
+<script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>

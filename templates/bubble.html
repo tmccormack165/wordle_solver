@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript"
+        src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+
+    <link rel="stylesheet" href="static/style.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript"
+        src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+</head>
+
+<body>
+
+    <canvas id="myCanvas"></canvas>
+    <a href="/game">
+        <div class="wrapper">
+            <div class="circle pulse"></div>
+            <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polygon points="40,30 65,50 40,70"></polygon>
+                </svg>
+            </div>
+        </div>
+    </a>
+    
+
+    <script type="text/javascript"
+        src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+
+</body>
+
+</html>
+<script>
+    var myName = "Wordle Solve";
+
+    var red = [0, 100, 63];
+    var orange = [40, 100, 60];
+    var green = [75, 100, 40];
+    var blue = [196, 77, 55];
+    var purple = [280, 50, 60];
+    var letterColors = [red, orange, green, blue, purple];
+
+    drawName(myName, letterColors);
+
+    if (10 < 3) {
+        bubbleShape = 'square';
+    }
+    else {
+        bubbleShape = 'oval';
+    }
+
+    bounceBubbles();
+</script>
