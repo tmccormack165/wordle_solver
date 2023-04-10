@@ -46,8 +46,36 @@
     </div>
     -->
     
-    <button style="position:absolute; width:50px; height: 50px;"></button>
+    <!--
+    <div class="wrapper">
+        <div class="circle pulse"></div>
+        <div class="circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <polygon points="40,30 65,50 40,70"></polygon>
+            </svg>
+        </div>
+    </div>
+    -->
+    <button style="width:75px; height: 75px; border-color: black; border-width: 1px;
+    position:absolute; border-radius: 10%;
+    -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+    -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+    background-color: #99e699;
+    display:inline-block;
+    ">
+    <!--
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <polygon points="40,30 65,50 40,70"></polygon>
+    </svg>
+    -->
+    <img src="static/images/best_home.png" style="width:60px; height:55px;">
+    </button>
+
+    <!--points="40,30 65,50 40,70"-->
     <div class="letter-row">
+        
 
         <label for="inp" class="inp">
             <form method="POST">
@@ -68,7 +96,7 @@
     <div id="game-board">
         
         {% for i in range(n_row) %}
-            <div class="letter-row" style="background-color: rgb(162, 213, 162);">
+            <div class="letter-row">
                 {% for j in range(n_col) %}
                     <div class="letter-box" style="background-color:{{ color_grid[i][j] }}">{{ grid[i][j] }}</div>
                 {% endfor %}
