@@ -132,12 +132,23 @@ def run(n, answer, vdf):
             print(f'GUESS DATA: {guess_data}')
             for j in range(guess_len):
                 gchar = guess[j]
+
+                if(gchar in guess_data['yellow']):
+                    color_grid[i][j] = yellow
+                elif(gchar in guess_data['green']):
+                    color_grid[i][j] = green
+                else:
+                    color_grid[i][j] = grey
+
+
+                """
                 if(gchar in guess_data['green']):
                     color_grid[i][j] = green
                 elif(gchar in guess_data['yellow']):
                     color_grid[i][j] = yellow
                 else:
                     color_grid[i][j] = grey
+                """
 
             
         

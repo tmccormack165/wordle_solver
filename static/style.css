@@ -15,7 +15,7 @@ h1 {
 }
 
 .letter-box {
-  border: 2px solid gray;
+  border: 3px solid black;
   border-radius: 5px;
   /*background-color: #88efa2;*/
   margin: 0.6rem;
