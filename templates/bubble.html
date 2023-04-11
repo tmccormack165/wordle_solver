@@ -46,19 +46,15 @@
 
     var red = [0, 100, 63];
     var orange = [40, 100, 60];
-    var green = [75, 100, 40];
+    //var green = [75, 100, 40]; //light green [100, 190, 50]
+    var pink = [100, 190, 50];
     var blue = [196, 77, 55];
     var purple = [280, 50, 60];
-    var letterColors = [red, orange, green, blue, purple];
+    //var letterColors = [red, orange, pink, blue, purple];
+    n = 5
+    var letterColors = [purple, purple, purple, purple, purple]
 
     drawName(myName, letterColors);
-
-    if (10 < 3) {
-        bubbleShape = 'square';
-    }
-    else {
-        bubbleShape = 'oval';
-    }
-
+    bubbleShape = 'oval'; // square
     bounceBubbles();
 </script>
