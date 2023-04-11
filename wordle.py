@@ -93,7 +93,7 @@ def check_answer(guess, answer, vocab_df):
 
 
 
-def run(n, answer, vocab_df):
+def run(n, answer, vdf):
     '''Generates n guesses for the user's answer, and exits if the answer is found
 
     Args:
@@ -107,7 +107,7 @@ def run(n, answer, vocab_df):
         if(i == 0):
             guess = 'audio'
         else:
-            guess = vocab_df.Word.values[0]
+            guess = vdf.Word.values[0]
 
         print(f'GUESS: {guess}')
 
@@ -121,8 +121,13 @@ def run(n, answer, vocab_df):
 
         if(answer == guess):
             print(f'Computer Wins')
+            color_grid[i] = [green] * word_len
+            #global vocab_df
+            #vocab_df = pickle.load(open('vocab_df.pickle', 'rb'))
+
+
         else:
-            vocab_df, guess_data = check_answer(guess, answer, vocab_df)
+            vdf, guess_data = check_answer(guess, answer, vdf)
             guess_data['green'] = [x[0] for x in guess_data['green']]
             print(f'GUESS DATA: {guess_data}')
             for j in range(guess_len):
