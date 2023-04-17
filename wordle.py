@@ -10,7 +10,9 @@ color_grid = [['white']*n_col for i in range(n_row)]
 
 yellow = '#FFF2AE'
 orange = '#FDCDAC'
-green = '#B3E2CD'
+dark_green = '#B3E2CD'
+light_green = '#ccfcd4'
+green = light_green
 grey = '#CCCCCC'
 
 answer_entered = False
@@ -128,14 +130,15 @@ def run(n, answer, vdf):
 
         else:
             vdf, guess_data = check_answer(guess, answer, vdf)
-            guess_data['green'] = [x[0] for x in guess_data['green']]
+            green_letters = [x[0] for x in guess_data['green']]
+            green_indices = [x[1] for x in guess_data['green']]
             print(f'GUESS DATA: {guess_data}')
             for j in range(guess_len):
                 gchar = guess[j]
 
-                if(gchar in guess_data['yellow']):
+                if(gchar in guess_data['yellow'] and j not in green_indices):
                     color_grid[i][j] = yellow
-                elif(gchar in guess_data['green']):
+                elif(gchar in green_letters):
                     color_grid[i][j] = green
                 else:
                     color_grid[i][j] = grey

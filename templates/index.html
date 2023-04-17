@@ -70,6 +70,9 @@
         <img src="static/images/best_home.png" style="width:60px; height:55px;">
     </button>
 
+    
+    
+
     <!--points="40,30 65,50 40,70"-->
     <div class="letter-row">
         
@@ -85,12 +88,22 @@
         </label>
     </div>
   
+    <ul style="background-color: red; width: 350px; height:0px;">
+        <li>
+            <a href="#" contenteditable>
+            <h2>Welcome!</h2>
+            <p>Enter a five letter word into the text field to see if our algorithm can guess your answer.</p>
+            <p>Select "i" for a walkthrough of the application</p>
+        </a>
+        </li>
+    </ul>
 
+    
     
 
 
 
-    <div id="game-board">
+    <div id="game-board" style="width: 50%; margin-left: 25%;">
         <p></p>
         {% for i in range(n_row) %}
             <div class="letter-row">
@@ -103,6 +116,9 @@
 
     </div>
 
+    
+    
+    
 
 
 <script
