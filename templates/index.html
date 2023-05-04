@@ -16,6 +16,24 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
 
+    <style>
+        
+        
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
     
 </head>
 
@@ -74,7 +92,7 @@
     
 
     <!--points="40,30 65,50 40,70"-->
-    <div class="letter-row">
+    <div class="letter-row" style="margin-bottom: -10px;">
         
 
         <label for="inp" class="inp">
@@ -88,22 +106,28 @@
         </label>
     </div>
   
-    <ul style="background-color: red; width: 350px; height:0px;">
+    
+    <ul style=" width: 350px; height:0px; margin-top: 0px;">
         <li>
             <a href="#" contenteditable>
             <h2>Welcome!</h2>
             <p>Enter a five letter word into the text field to see if our algorithm can guess your answer.</p>
             <p>Select "i" for a walkthrough of the application</p>
-        </a>
+            </a>
         </li>
     </ul>
+    
 
+    <!-- chalkboard
+    <ul style="background-color: red; width: 450px; height:10px; margin-left: 71%;  margin-bottom: 0px;">
+        <div class="chalkboard" style="height:300px; width:600px; margin-top: 0px;">Human</div>
+    </ul>
+    -->
     
     
 
 
-
-    <div id="game-board" style="width: 50%; margin-left: 25%;">
+    <div id="game-board" style="width: 40%; margin-left: 30%; margin-top: -10%;">
         <p></p>
         {% for i in range(n_row) %}
             <div class="letter-row">
@@ -115,6 +139,8 @@
         
 
     </div>
+    
+
 
     
     
