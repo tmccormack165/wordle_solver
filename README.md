@@ -1,3 +1,6 @@
+# The application is live at http://tmccormack14.pythonanywhere.com/
+
+
 # wordle_solver
 A web application that allows users to try and outsmart our wordle solving algorithm
 
